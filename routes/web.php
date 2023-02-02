@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\TravelpackagesController;
 use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\WelcomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +20,14 @@ use App\Http\Controllers\User\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('guest')->name('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->middleware('guest')->name('welcome');
 
+Route::controller(WelcomeController::class)->group(function () {
+    Route::get('/', 'index')->name('welcome,index');
+    Route::get('pakettravel', 'pakettravel')->name('welcome.pakettravel');
+})->middleware('guest');
 // Route::get('/dashboard', function () {
 //     return view('admin.dashboard.index');
 // })->middleware(['auth', 'verified'])->name('dashboard');
