@@ -8,7 +8,7 @@
         <meta name="author" content="" />
         <title>Dashboard - SB Admin</title>
 
-        {{-- Bootstrap Icon --}}
+        <!-- Bootstrap Icon -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />

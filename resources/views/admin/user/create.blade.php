@@ -23,24 +23,28 @@
                     @csrf
                     <div class="mb-3">
                         <label for="nama" class="form-label">Name</label>
-                        <input type="text" class="form-control" name="name" placeholder="Masukan nama">
+                        <input type="text" class="form-control" name="name" placeholder="Masukan nama" value="{{ old('name') }}">
                     </div>
                     <div class="mb-3">
                         <label for="emai0l" class="form-label">Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="Masukan email">
+                        <input type="email" class="form-control" name="email" placeholder="Masukan email" value="{{ old('email') }}">
                     </div>
                     <div class="mb-3">
                         <label for="telepon" class="form-label">Username</label>
-                        <input type="text" class="form-control" name="username" placeholder="Masukan username">
+                        <input type="text" class="form-control" name="username" placeholder="Masukan username" value="{{ old('username') }}">
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" placeholder="Masukan password">
                     </div>
                     <div class="mb-3">
+                        <label for="confirmation_password" class="form-label">Confirmation Password</label>
+                        <input type="password" class="form-control" name="password_confirmation" placeholder="Masukan konfirmasi password">
+                    </div>
+                    <div class="mb-3">
                         <label>Role</label>
                         <select name="role" class="form-select" aria-label="Default select example">
-                                <option value="admin">Admin</option>
+                                {{-- <option value="admin">Admin</option> --}}
                                 <option value="user">User</option>
                         </select>
                     </div>

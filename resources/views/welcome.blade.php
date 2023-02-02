@@ -186,9 +186,9 @@
                           </div>
                     </div>
                 </div>
-                <div>
-                    <a href="" class="btn btn-outline-light" style="color" >asdq</a>
-                </div>
+                <div class="text-center mt-5">
+                <a href="" class="btn btn-outline-light py-2" style="width: 20rem">Lihat Selengkapnya</a>
+            </div>
             </div>
         </section>
         <!-- Contact Section-->

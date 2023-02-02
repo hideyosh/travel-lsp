@@ -26,9 +26,23 @@
                       <li><a class="dropdown-item" href="#">VISA</a></li>
                     </ul>
                   </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('login') }}">Login</a>
-                </li>
+                    <li class="nav-item dropdown mx-0 mx-lg-1">
+                        <a class="nav-link dropdown-toggle py-3 px-0 px-lg-3" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user fa-fw"></i>
+                            @if(Auth::check())
+                                <span class="d-none d-xl-inline-block text-white ms-1">{{Auth::user()->name}}</span>
+                            @endif
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a></li>
+                            <li>
+                                <form class="dropdown-item" action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger "> Logout </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
             </ul>
         </div>
     </div>

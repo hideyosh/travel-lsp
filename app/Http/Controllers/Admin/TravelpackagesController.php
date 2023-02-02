@@ -4,10 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\User;
-use Illuminate\Support\Facades\Hash;
+use App\Models\Travel_packages;
 
-class UserController extends Controller
+class TravelpackagesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +15,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = User::latest()->where('role', 'user')->paginate(5);
-        return view('admin.user.index',[
-            'title' => 'Users Table',
-            'users' => $user
+        $travel = Travel_packages::latest()->paginate(5);
+        return view('admin.travel_paket.index', [
+            'title' => 'Paket Travel Table',
+            'travels' => $travel
         ]);
     }
 
@@ -30,8 +29,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.user.create', [
-            'title' => 'Create User'
+        return view('admin.travel_paket.create', [
+            'title' => 'Create Travel',
         ]);
     }
 
@@ -41,20 +40,21 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, User $user)
+    public function store(Request $request, Travel_packages $travel)
     {
         $request->validate([
-            'name' => ['required'],
-            'email' => ['required','email','unique:users'],
-            'role' => ['required'],
-            'password' => ['required', 'confirmed'],
+            'title' => ['required'],
+            'about' => ['required'],
+            'location' => ['required'],
+            'price' => ['required'],
+            'departure_date' => ['required'],
+            'duration' => ['required']
         ]);
 
         $store = $request->all();
-        $store['password'] = Hash::make($request->password);
-        $user->create($store);
+        $travel->create($store);
 
-        return redirect()->route('user.index');
+        return redirect()->route('travelpackages.index');
     }
 
     /**
@@ -63,12 +63,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($id)
     {
-        return view('admin.user.view', [
-            'user' => $user,
-            'title' => 'Detail User',
-        ]);
+        //
     }
 
     /**
@@ -89,7 +86,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -100,10 +97,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
-         $user->delete();
-
-         return redirect()->route('user.index');
+        //
     }
 }
