@@ -64,7 +64,7 @@
         </div>
     </div>
 </section>
-<!-- About Section-->
+<!-- Paket Section-->
 <section class="page-section bg-primary text-white mb-0" id="about">
     <div class="container">
         <!-- About Section Heading-->
@@ -79,7 +79,7 @@
         <div class="row mx-5">
             <div class="col-md-4">
                 <div class="card mx-3" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="{{ asset('img-scenery/gambar3.jpg') }}"  style="height: 11rem;" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title text-primary">Maldives</h5>
                       <p class="card-text text-primary" >Ayo liburan ke pantai Maldives!!!</p>
@@ -89,7 +89,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card mx-3" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="{{ asset('img-scenery/gambar4.jpg') }}" style="height: 11rem;" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title text-primary">Greenland</h5>
                       <p class="card-text text-primary" >Ayo liburan ke pantai Greenland!!!</p>
@@ -99,7 +99,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card mx-3" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="{{ asset('img-scenery/gambar5.jpg') }}" style="height: 11rem;" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title text-primary">Iceland</h5>
                       <p class="card-text text-primary" >Ayo liburan ke pantai Iceland!!!</p>
@@ -109,11 +109,7 @@
             </div>
         </div>
         <div class="text-center mt-5">
-        <a href="@if ($user = auth()->user())
-            {{ route('') }}
-        @else
-
-        @endif" class="btn btn-outline-light py-2" style="width: 20rem">Lihat Selengkapnya</a>
+        <a href="{{ route('welcome.pakettravel') }}" class="btn btn-outline-light py-2" style="width: 20rem">Lihat Selengkapnya</a>
     </div>
     </div>
 </section>

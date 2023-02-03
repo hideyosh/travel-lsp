@@ -24,10 +24,10 @@ use App\Http\Controllers\WelcomeController;
 //     return view('welcome');
 // })->middleware('guest')->name('welcome');
 
-Route::controller(WelcomeController::class)->group(function () {
-    Route::get('/', 'index')->name('welcome,index');
+Route::controller(WelcomeController::class)->middleware('guest')->group(function () {
+    Route::get('/', 'index')->name('welcome.index');
     Route::get('pakettravel', 'pakettravel')->name('welcome.pakettravel');
-})->middleware('guest');
+});
 // Route::get('/dashboard', function () {
 //     return view('admin.dashboard.index');
 // })->middleware(['auth', 'verified'])->name('dashboard');

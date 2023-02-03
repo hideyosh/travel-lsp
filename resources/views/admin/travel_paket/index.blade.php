@@ -1,4 +1,4 @@
-@extends('admin.home')
+@extends('admin.dashboard')
 @section('content')
 <div class="container-fluid px-4">
     <h1 class="mt-4">{{ $title }}</h1>
@@ -38,7 +38,7 @@
                                 <form action="{{ route('travelpackages.destroy', $travel->id) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('delete')
-                                    <button href="{{ route('logout') }}"  onclick="return confirm('Apakah anda akan menghapus data ini?')" class="btn btn-danger">
+                                    <button href="{{ route('logout') }}"  onclick="return confirm('Apakah anda akan menghapus {{ $travel->title }}?')" class="btn btn-danger">
                                         <i class="bi bi-trash-fill"></i>
                                     </button>
                                 </form>
