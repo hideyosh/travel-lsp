@@ -77,36 +77,18 @@
         </div>
         <!-- About Section Content-->
         <div class="row mx-5">
+            @foreach ($travel as $travel)
             <div class="col-md-4">
                 <div class="card mx-3" style="width: 18rem;">
-                    <img src="{{ asset('img-scenery/gambar3.jpg') }}"  style="height: 11rem;" class="card-img-top" alt="...">
+                    <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title text-primary">Maldives</h5>
-                      <p class="card-text text-primary" >Ayo liburan ke pantai Maldives!!!</p>
-                      <a href="#" class="btn btn-primary">Lihat</a>
+                            <h5 class="card-title text-primary">{{ $travel->title }}</h5>
+                            <p class="card-text text-primary" >{{ $travel->about }}</p>
+                            <a href="#" class="btn btn-primary px-5">Lihat</a>
                     </div>
                   </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mx-3" style="width: 18rem;">
-                    <img src="{{ asset('img-scenery/gambar4.jpg') }}" style="height: 11rem;" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-primary">Greenland</h5>
-                      <p class="card-text text-primary" >Ayo liburan ke pantai Greenland!!!</p>
-                      <a href="#" class="btn btn-primary">Lihat</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mx-3" style="width: 18rem;">
-                    <img src="{{ asset('img-scenery/gambar5.jpg') }}" style="height: 11rem;" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-primary">Iceland</h5>
-                      <p class="card-text text-primary" >Ayo liburan ke pantai Iceland!!!</p>
-                      <a href="#" class="btn btn-primary">Lihat</a>
-                    </div>
-                  </div>
-            </div>
+        @endforeach
         </div>
         <div class="text-center mt-5">
         <a href="{{ route('welcome.pakettravel') }}" class="btn btn-outline-light py-2" style="width: 20rem">Lihat Selengkapnya</a>

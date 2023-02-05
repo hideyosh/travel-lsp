@@ -38,7 +38,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('travelpackages', TravelpackagesController::class);
 });
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'user'])->group(function () {
     Route::get('/home',[HomeController::class, 'index'])->name('home.index');
 });
 

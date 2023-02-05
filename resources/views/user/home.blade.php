@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Freelancer - Start Bootstrap Theme</title>
+        <title>Travel Sir</title>
         <!-- Icon -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <!-- Favicon-->
@@ -19,9 +19,13 @@
         <link href="{{ asset('template/css/styles.css') }}" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <!-- Navigation-->
+        <!-- Navbar -->
        @include('user.layouts.navbar')
 
+       <!-- Carousel -->
+       @include('user.layouts.carousel')
+
+       <!-- Content -->
         @yield('content')
 
         <!-- Footer-->
