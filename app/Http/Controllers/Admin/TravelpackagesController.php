@@ -65,7 +65,7 @@ class TravelpackagesController extends Controller
      */
     public function show(Travel_packages $travelpackage)
     {
-        return view('admin.dashboard',[
+        return view('admin.travel_paket.view',[
             'title' => 'Detail Travel Package',
             'travel' => $travelpackage,
         ]);

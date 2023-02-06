@@ -21,7 +21,7 @@
                         <div class="icon d-flex" style="justify-content: center">
                             <span><i class="bi bi-person-circle fs-1"></i></span>
                         </div>
-                         <p class="text-center">Data not define</p>
+                        <p class="text-center fs-4">{{ $users }}</p>
                     </div>
                   </div>
             </div>
@@ -91,8 +91,8 @@
         @endforeach
         </div>
         <div class="text-center mt-5">
-        <a href="{{ route('welcome.pakettravel') }}" class="btn btn-outline-light py-2" style="width: 20rem">Lihat Selengkapnya</a>
-    </div>
+            <a href="{{ route('welcome.pakettravel') }}" class="btn btn-outline-light py-2" style="width: 20rem">Lihat Selengkapnya</a>
+        </div>
     </div>
 </section>
 <!-- Contact Section-->

@@ -23,9 +23,6 @@
          <!-- Navbar -->
        @include('layouts.navbar')
 
-         <!-- Carousel -->
-        @include('layouts.carousel')
-
          <!-- Content -->
         @yield('content')
 

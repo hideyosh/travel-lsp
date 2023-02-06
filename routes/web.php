@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\TravelpackagesController;
 use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\User\TravelController;
 use App\Http\Controllers\WelcomeController;
 
 
@@ -26,7 +27,7 @@ use App\Http\Controllers\WelcomeController;
 
 Route::controller(WelcomeController::class)->middleware('guest')->group(function () {
     Route::get('/', 'index')->name('welcome.index');
-    Route::get('pakettravel', 'pakettravel')->name('welcome.pakettravel');
+    Route::get('/pakettravel', 'pakettravel')->name('welcome.pakettravel');
 });
 // Route::get('/dashboard', function () {
 //     return view('admin.dashboard.index');
@@ -40,6 +41,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 Route::middleware(['auth', 'user'])->group(function () {
     Route::get('/home',[HomeController::class, 'index'])->name('home.index');
+    Route::controller(TravelController::class)->group(function () {
+        Route::get('/travelpaket', 'index')->name('pakettravel.index');
+        Route::get('/travelpaket/{travelpaket}', 'show')->name('pakettravel.show');
+    });
 });
 
 Route::middleware('auth')->group(function () {
