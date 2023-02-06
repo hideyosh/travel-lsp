@@ -102,7 +102,11 @@ class TravelpackagesController extends Controller
             'departure_date' => ['required'],
             'duration' => ['required']
         ]);
+
         $update = $request->all();
+        $travelpackage->update($update);
+
+        return to_route('travelpackages.index');
     }
 
     /**

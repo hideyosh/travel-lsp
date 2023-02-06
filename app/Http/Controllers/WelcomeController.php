@@ -17,6 +17,9 @@ class WelcomeController extends Controller
 
     public function pakettravel()
     {
-        return view('welcome.pakettravel');
+        $travel = Travel_packages::paginate(9);
+        return view('welcome.pakettravel',[
+            'travel' => $travel
+        ]);
     }
 }

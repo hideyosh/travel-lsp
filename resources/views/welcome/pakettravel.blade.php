@@ -13,102 +13,19 @@
         </div>
         <!-- Paket Travel Section Content-->
         <div class="row mx-5">
+            @foreach ($travel as $travels)
             <div class="col-md-4">
                 <div class="card mx-3" style="width: 18rem;">
                     <img src="{{ asset('img-scenery/gambar2.jpg') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title text-primary">Maldives</h5>
-                      <p class="card-text text-primary" >Ayo liburan ke pantai Maldives!!!</p>
+                      <h5 class="card-title text-primary">{{ $travels->title }}</h5>
+                      <p class="card-text text-primary" >{{ $travels->about }}</p>
                       <a href="#" class="btn btn-primary">Lihat Detail Paket</a>
                     </div>
                   </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mx-3" style="width: 18rem;">
-                    <img src="{{ asset('img-scenery/gambar3.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-primary">Greenland</h5>
-                      <p class="card-text text-primary" >Ayo liburan ke pantai Greenland!!!</p>
-                      <a href="#" class="btn btn-primary">Lihat Detail Paket</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mx-3" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-primary">Iceland</h5>
-                      <p class="card-text text-primary" >Ayo liburan ke pantai Iceland!!!</p>
-                      <a href="#" class="btn btn-primary">Lihat Detail Paket</a>
-                    </div>
-                  </div>
-            </div>
+            @endforeach
         </div>
-        <div class="row mx-5 my-5">
-            <div class="col-md-4">
-                <div class="card mx-3" style="width: 18rem;">
-                    <img src="{{ asset('img-scenery/gambar1.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-primary">Maldives</h5>
-                      <p class="card-text text-primary" >Ayo liburan ke pantai Maldives!!!</p>
-                      <a href="#" class="btn btn-primary">Lihat Detail Paket</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mx-3" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-primary">Greenland</h5>
-                      <p class="card-text text-primary" >Ayo liburan ke pantai Greenland!!!</p>
-                      <a href="#" class="btn btn-primary">Lihat Detail Paket</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mx-3" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-primary">Iceland</h5>
-                      <p class="card-text text-primary" >Ayo liburan ke pantai Iceland!!!</p>
-                      <a href="#" class="btn btn-primary">Lihat Detail Paket</a>
-                    </div>
-                  </div>
-            </div>
-        </div>
-        <div class="row mx-5 my-5">
-            <div class="col-md-4">
-                <div class="card mx-3" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-primary">Maldives</h5>
-                      <p class="card-text text-primary" >Ayo liburan ke pantai Maldives!!!</p>
-                      <a href="#" class="btn btn-primary">Lihat Detail Paket</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mx-3" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-primary">Greenland</h5>
-                      <p class="card-text text-primary" >Ayo liburan ke pantai Greenland!!!</p>
-                      <a href="#" class="btn btn-primary">Lihat Detail Paket</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mx-3" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-primary">Iceland</h5>
-                      <p class="card-text text-primary" >Ayo liburan ke pantai Iceland!!!</p>
-                      <a href="#" class="btn btn-primary">Lihat Detail Paket</a>
-                    </div>
-                  </div>
-            </div>
-        </div>
-
     </div>
     </div>
 </section>
