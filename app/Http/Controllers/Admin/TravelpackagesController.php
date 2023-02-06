@@ -94,7 +94,15 @@ class TravelpackagesController extends Controller
      */
     public function update(Request $request, Travel_packages $travelpackage)
     {
-        //
+        $request->validate([
+            'title' => ['required'],
+            'about' => ['required'],
+            'location' => ['required'],
+            'price' => ['required'],
+            'departure_date' => ['required'],
+            'duration' => ['required']
+        ]);
+        $update = $request->all();
     }
 
     /**

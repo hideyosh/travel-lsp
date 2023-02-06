@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\travel_packages;
+use App\Models\Travel_packages;
 
 class WelcomeController extends Controller
 {
     public function index()
     {
-        $travel = travel_packages::paginate(3);
+        $travel = Travel_packages::paginate(3);
         return view('welcome.index', [
             'travel' => $travel
         ]);
