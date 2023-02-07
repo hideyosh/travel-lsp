@@ -40,21 +40,21 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- Portfolio Grid Items-->
-        <div class="row justify-content-center">
+        <div class="row">
             <!-- Portfolio Item 1-->
-            <div class="col-md-4 col-lg-3 mb-5 mx-2">
+            <div class="col-md-3 col-lg-2 mb-5 mx-5">
                 <div class="card" style="width: 18rem">
                     <div class="card-body">
                         <h5 class="text-center">Customers</h5>
                         <div class="icon d-flex" style="justify-content: center">
                             <span><i class="bi bi-person-circle fs-1"></i></span>
                         </div>
-                         <p class="text-center fs-4">{{ $user }}</p>
+                        <p class="text-center fs-4">{{ $users }}</p>
                     </div>
                   </div>
             </div>
             <!-- Portfolio Item 2-->
-            <div class="col-md-4 col-lg-3 mb-5 mx-3">
+            <div class="col-md-3 col-lg-2 mb-5 mx-5">
                 <div class="card" style="width: 18rem">
                     <div class="card-body">
                         <h5 class="text-center">Countries</h5>
@@ -65,8 +65,8 @@
                     </div>
                   </div>
             </div>
-            <!-- Portfolio Item 3-->
-            <div class="col-md-4 col-lg-3 mb-5 mx-3">
+            <!-- Portfolio Item 2-->
+            <div class="col-md-3 col-lg-2 mb-5 mx-5">
                 <div class="card" style="width: 18rem">
                     <div class="card-body">
                         <h5 class="text-center">Hotels</h5>
@@ -77,8 +77,8 @@
                     </div>
                   </div>
             </div>
-            <!-- Portfolio Item 4-->
-            <div class="col-md-4 col-lg-3 mb-5 mx-3">
+            <!-- Portfolio Item 2-->
+            <div class="col-md-3 col-lg-2 mb-5 mx-5">
                 <div class="card" style="width: 18rem">
                     <div class="card-body">
                         <h5 class="text-center">Agents</h5>
@@ -112,7 +112,7 @@
                     <div class="card-body">
                             <h5 class="card-title text-primary">{{ $travel->title }}</h5>
                             <p class="card-text text-primary" >{{ $travel->about }}</p>
-                            <a href="#" class="btn btn-primary px-5">Lihat</a>
+                            <a href="{{ route('pakettravel.show', $travel->id) }}" class="btn btn-primary px-5">Lihat</a>
                     </div>
                   </div>
             </div>

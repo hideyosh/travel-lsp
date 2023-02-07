@@ -15,7 +15,7 @@ class HomeController extends Controller
         $travel = Travel_packages::paginate(3);
         return view('user.home.index', [
             'travel' => $travel,
-            'user' => $user
+            'users' => $user
         ]);
     }
 }

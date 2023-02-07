@@ -14,7 +14,7 @@ class WelcomeController extends Controller
         $travel = Travel_packages::paginate(3);
         return view('welcome.index', [
             'travel' => $travel,
-            'users' => $user
+            'users' => $user,
         ]);
     }
 
