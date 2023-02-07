@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('users_id')->constrained('users')->cascadeOnDelete();$table->foreignId('users_id')->constrained('users')->cascadeOnDelete();
             $table->foreignId('users_id')->constrained('users')->cascadeOnDelete();
             $table->foreignId('travel_packages_id')->constrained('travel_packages')->cascadeOnDelete();
-            $table->enum('status', ['belom_bayar', 'sudah dibayar']);
-            $table->integer('additional_visa');
+            $table->enum('status', ['belom_bayar', 'sudah dibayar'])->default('belom_bayar');
+            $table->integer('visa');
             $table->string('total');
             $table->timestamps();
         });

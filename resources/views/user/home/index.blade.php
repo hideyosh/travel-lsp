@@ -40,10 +40,11 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- Portfolio Grid Items-->
-        <div class="row">
+          <!-- Portfolio Grid Items-->
+          <div class="row justify-content-center">
             <!-- Portfolio Item 1-->
-            <div class="col-md-3 col-lg-2 mb-5 mx-5">
-                <div class="card" style="width: 18rem">
+            <div class="col-md-3 col-lg-2 mb-5 mx-4">
+                <div class="card" style="width: 14rem">
                     <div class="card-body">
                         <h5 class="text-center">Customers</h5>
                         <div class="icon d-flex" style="justify-content: center">
@@ -54,8 +55,8 @@
                   </div>
             </div>
             <!-- Portfolio Item 2-->
-            <div class="col-md-3 col-lg-2 mb-5 mx-5">
-                <div class="card" style="width: 18rem">
+            <div class="col-md-3 col-lg-2 mb-5 mx-4">
+                <div class="card" style="width: 14rem">
                     <div class="card-body">
                         <h5 class="text-center">Countries</h5>
                         <div class="icon d-flex" style="justify-content: center">
@@ -66,8 +67,8 @@
                   </div>
             </div>
             <!-- Portfolio Item 2-->
-            <div class="col-md-3 col-lg-2 mb-5 mx-5">
-                <div class="card" style="width: 18rem">
+            <div class="col-md-3 col-lg-2 mb-5 mx-4">
+                <div class="card" style="width: 14rem">
                     <div class="card-body">
                         <h5 class="text-center">Hotels</h5>
                         <div class="icon d-flex" style="justify-content: center">
@@ -78,8 +79,8 @@
                   </div>
             </div>
             <!-- Portfolio Item 2-->
-            <div class="col-md-3 col-lg-2 mb-5 mx-5">
-                <div class="card" style="width: 18rem">
+            <div class="col-md-3 col-lg-2 mb-5 mx-4">
+                <div class="card" style="width: 14rem">
                     <div class="card-body">
                         <h5 class="text-center">Agents</h5>
                         <div class="icon d-flex" style="justify-content: center">

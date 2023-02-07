@@ -1,5 +1,33 @@
 @extends('app')
 @section('content')
+<!-- Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner" style="height: 40rem;">
+      <div class="carousel-item active">
+        <img src="{{ asset('img-scenery/gambar2.jpg') }}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ asset('img-scenery/gambar3.jpg') }}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ asset('img-scenery/gambar4.jpg') }}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
   <!-- Portfolio Section-->
   <section class="page-section portfolio" id="portfolio">
     <div class="container">
@@ -12,10 +40,10 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- Portfolio Grid Items-->
-        <div class="row">
+        <div class="row justify-content-center">
             <!-- Portfolio Item 1-->
-            <div class="col-md-3 col-lg-2 mb-5 mx-5">
-                <div class="card" style="width: 18rem">
+            <div class="col-md-3 col-lg-2 mb-5 mx-4">
+                <div class="card" style="width: 14rem">
                     <div class="card-body">
                         <h5 class="text-center">Customers</h5>
                         <div class="icon d-flex" style="justify-content: center">
@@ -26,8 +54,8 @@
                   </div>
             </div>
             <!-- Portfolio Item 2-->
-            <div class="col-md-3 col-lg-2 mb-5 mx-5">
-                <div class="card" style="width: 18rem">
+            <div class="col-md-3 col-lg-2 mb-5 mx-4">
+                <div class="card" style="width: 14rem">
                     <div class="card-body">
                         <h5 class="text-center">Countries</h5>
                         <div class="icon d-flex" style="justify-content: center">
@@ -38,8 +66,8 @@
                   </div>
             </div>
             <!-- Portfolio Item 2-->
-            <div class="col-md-3 col-lg-2 mb-5 mx-5">
-                <div class="card" style="width: 18rem">
+            <div class="col-md-3 col-lg-2 mb-5 mx-4">
+                <div class="card" style="width: 14rem">
                     <div class="card-body">
                         <h5 class="text-center">Hotels</h5>
                         <div class="icon d-flex" style="justify-content: center">
@@ -50,8 +78,8 @@
                   </div>
             </div>
             <!-- Portfolio Item 2-->
-            <div class="col-md-3 col-lg-2 mb-5 mx-5">
-                <div class="card" style="width: 18rem">
+            <div class="col-md-3 col-lg-2 mb-5 mx-4">
+                <div class="card" style="width: 14rem">
                     <div class="card-body">
                         <h5 class="text-center">Agents</h5>
                         <div class="icon d-flex" style="justify-content: center">
