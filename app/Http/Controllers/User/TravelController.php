@@ -22,4 +22,12 @@ class TravelController extends Controller
             'travel' => $travelpaket
         ]);
     }
+
+    public function order($id)
+    {
+        $travelpaket = Travel_packages::findOrFail($id);
+        return view('user.transaksi.create',[
+            'travel' => $travelpaket
+        ]);
+    }
 }
