@@ -15,7 +15,7 @@ class Transaction extends Model
 
     public function Metode_pembayaran()
     {
-        return $this->belongsTo(Metode_pembayaran::class);
+        return $this->belongsTo(Metode_pembayaran::class, 'pembayrans_id');
     }
 
     public function Travel_packages()
@@ -25,7 +25,7 @@ class Transaction extends Model
 
     public function User()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'users_id');
     }
 
 

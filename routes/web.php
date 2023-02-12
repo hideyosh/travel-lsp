@@ -51,8 +51,8 @@ Route::middleware(['auth', 'user'])->group(function () {
         Route::get('/travelpaket/{travelpaket}', 'show')->name('pakettravel.show');
     });
     Route::controller(TransaksiuserController::class)->group(function () {
-        Route::get('/transaksi/{id}', 'create')->name('transaksiuser.index');
-        Route::post('/transaksi', 'store')->name('transaksiuser.store');
+        Route::get('/transaksiuser/{id}', 'create')->name('transaksiuser.index');
+        Route::post('/transaksiuser', 'store')->name('transaksiuser.store');
     });
 });
 

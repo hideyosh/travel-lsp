@@ -12,13 +12,25 @@
                 <thead>
                     <tr>
                     <th>Name</th>
+                    <th>Travel Packages</th>
+                    <th>Waktu Pemesanan</th>
+                    <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($transaksi as $transaksi)
                         <tr>
                             <td>
-                                <p>{{ $transaksi->travel_packages->price }}</p>
+                                <p>{{ $transaksi->user->name }}</p>
+                            </td>
+                            <td>
+                                <p>{{ $transaksi->travel_packages->title }}</p>
+                            </td>
+                            <td>
+                                <p>{{ $transaksi->created_at }}</p>
+                            </td>
+                            <td>
+                                <p>{{ $transaksi->status }}</p>
                             </td>
                             <td class="text-end">
                                 <a href="{{ route('transaksi.show', $transaksi->id) }}" class="btn btn-success">

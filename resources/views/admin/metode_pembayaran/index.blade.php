@@ -11,14 +11,14 @@
             <table class="table">
                 <thead>
                     <tr>
-                    <th>Name</th>
+                    <th>Nama metode pembayaran</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($pembayarans as $pembayaran)
                         <tr>
                             <td>
-                                <p>{{ $pembayaran->name }}</p>
+                                <p>{{ $pembayaran->nama_metode }}</p>
                             </td>
                             <td class="text-end">
                                 <a href="{{ route('metodepembayaran.show', $pembayaran->id) }}" class="btn btn-success">

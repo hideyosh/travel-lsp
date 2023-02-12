@@ -15,7 +15,8 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        $transaksi = Transaction::with('user', 'metode_pembayaran' , 'travel_packages')->where('status', 'belom_bayar')->paginate(8);
+
+        $transaksi = Transaction::with('user', 'metode_pembayaran' , 'travel_packages')->where('status', 'belom_bayar')->get();
 
         return view('admin.transaksi.index', compact('transaksi'));
     }

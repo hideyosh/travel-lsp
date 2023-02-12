@@ -43,7 +43,7 @@ class MetodepembayaranController extends Controller
     public function store(Request $request, Metode_pembayaran $pembayaran)
     {
         $request->validate([
-            'name' => ['required'],
+            'nama_metode' => ['required'],
         ]);
 
         $store = $request->all();

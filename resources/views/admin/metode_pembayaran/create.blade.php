@@ -23,7 +23,7 @@
                     @csrf
                     <div class="mb-3">
                         <label for="title" class="form-label">Nama</label>
-                        <input type="text" class="form-control" name="name"  placeholder="Masukan nama metode pembayaran" autofocus>
+                        <input type="text" class="form-control" name="nama_metode"  placeholder="Masukan nama metode pembayaran" autofocus>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary mt-3 mb-2 w-100">Create</button>

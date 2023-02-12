@@ -36,7 +36,7 @@
                         <select name="pembayrans_id" class="form-select" aria-label="Default select example">
                                 <option value="#">Silahkan pilih</option>
                                @foreach ($pembayaran as $pembayaran)
-                               <option value="{{ $pembayaran->id }}">{{ $pembayaran->name }}</option>
+                               <option value="{{ $pembayaran->id }}">{{ $pembayaran->nama_metode }}</option>
                                @endforeach
                         </select>
                 </div>
