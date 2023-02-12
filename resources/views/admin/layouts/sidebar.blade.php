@@ -21,7 +21,7 @@
                         <a class="nav-link " href="{{ route('user.index') }}">User</a>
                     </nav>
                 </div>
-                <div class>
+                <div>
                     <a class="nav-link
                     {{ Route::is('travelpackages.index', 'travelpackages.create' ,'travelpackages.edit' ,'travelpackages.show') ? 'active' : '' }}"
                     href="{{ route('travelpackages.index') }}">
@@ -29,15 +29,22 @@
                         Paket Travel
                     </a>
                 </div>
-                <div class="sb-sidenav-menu-heading">Addons</div>
-                <a class="nav-link" href="charts.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                    Charts
-                </a>
-                <a class="nav-link" href="tables.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Tables
-                </a>
+                <div>
+                    <a class="nav-link
+                    {{ Route::is('metodepembayaran.index', 'metodepembayaran.create' ,'metodepembayaran.edit' ,'metodepembayaran.show') ? 'active' : '' }}"
+                    href="{{ route('metodepembayaran.index') }}">
+                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        Metode Pembayaran
+                    </a>
+                </div>
+                <div>
+                    <a class="nav-link
+                    {{ Route::is('transaksi.index', 'transaksi.create' ,'transaksi.edit' ,'transaksi.show') ? 'active' : '' }}"
+                    href="{{ route('transaksi.index') }}">
+                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        Transaksi
+                    </a>
+                </div>
             </div>
         </div>
         <div class="sb-sidenav-footer">

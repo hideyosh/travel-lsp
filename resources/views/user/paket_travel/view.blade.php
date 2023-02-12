@@ -14,7 +14,7 @@
         <p class="text-dark fw-bold">{{ $travel->duration }}</p>
         <div class="d-flex">
             <a href="/travelpaket" class="btn btn-primary">Back</a>
-            <a href="" class="btn btn-primary ms-3">Book Now!!</a>
+            <a href="{{ route('transaksiuser.index', $travel->id) }}" class="btn btn-primary ms-3">Book Now!!</a>
         </div>
     </div>
 

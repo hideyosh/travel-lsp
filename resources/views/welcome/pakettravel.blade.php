@@ -40,7 +40,7 @@
                     <div class="card-body">
                       <h5 class="card-title text-primary">{{ $travels->title }}</h5>
                       <p class="card-text text-primary" >{{ $travels->about }}</p>
-                      <a href="#" class="btn btn-primary">Lihat Detail Paket</a>
+                      <a href="{{ route('pakettravel.show', $travels->id) }}" class="btn btn-primary">Lihat Detail Paket</a>
                     </div>
                   </div>
             </div>

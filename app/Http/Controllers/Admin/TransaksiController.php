@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Transaction;
 
 class TransaksiController extends Controller
 {
@@ -14,7 +15,9 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        //
+        $transaksi = Transaction::with('user', 'metode_pembayaran' , 'travel_packages')->where('status', 'belom_bayar')->paginate(8);
+
+        return view('admin.transaksi.index', compact('transaksi'));
     }
 
     /**
@@ -26,7 +29,6 @@ class TransaksiController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *

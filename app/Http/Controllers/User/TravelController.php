@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Travel_packages;
+use App\Models\Metode_pembayaran;
 
 class TravelController extends Controller
 {
@@ -23,11 +24,4 @@ class TravelController extends Controller
         ]);
     }
 
-    public function order($id)
-    {
-        $travelpaket = Travel_packages::findOrFail($id);
-        return view('user.transaksi.create',[
-            'travel' => $travelpaket
-        ]);
-    }
 }

@@ -11,4 +11,9 @@ class Metode_pembayaran extends Model
     protected $guarded = [
        'id'
     ];
+
+    public function Transaction()
+    {
+        return $this->hasMany(Transaction::class);
+    }
 }

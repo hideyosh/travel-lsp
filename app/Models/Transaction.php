@@ -8,4 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 class Transaction extends Model
 {
     use HasFactory;
+
+    protected $guarded = [
+        'id'
+    ];
+
+    public function Metode_pembayaran()
+    {
+        return $this->belongsTo(Metode_pembayaran::class);
+    }
+
+    public function Travel_packages()
+    {
+        return $this->belongsTo(Travel_packages::class);
+    }
+
+    public function User()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+
 }

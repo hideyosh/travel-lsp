@@ -5,8 +5,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\TravelpackagesController;
+use App\Http\Controllers\Admin\MetodepembayaranController;
+use App\Http\Controllers\Admin\TransaksiController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\TravelController;
+use App\Http\Controllers\User\TransaksiuserController;
 use App\Http\Controllers\WelcomeController;
 
 
@@ -37,6 +40,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, '__invoke'])->name('dashboard');
     Route::resource('user', UserController::class);
     Route::resource('travelpackages', TravelpackagesController::class);
+    Route::resource('metodepembayaran', MetodePembayaranController::class);
+    Route::resource('transaksi', TransaksiController::class);
 });
 
 Route::middleware(['auth', 'user'])->group(function () {
@@ -44,6 +49,10 @@ Route::middleware(['auth', 'user'])->group(function () {
     Route::controller(TravelController::class)->group(function () {
         Route::get('/travelpaket', 'index')->name('pakettravel.index');
         Route::get('/travelpaket/{travelpaket}', 'show')->name('pakettravel.show');
+    });
+    Route::controller(TransaksiuserController::class)->group(function () {
+        Route::get('/transaksi/{id}', 'create')->name('transaksiuser.index');
+        Route::post('/transaksi', 'store')->name('transaksiuser.store');
     });
 });
 

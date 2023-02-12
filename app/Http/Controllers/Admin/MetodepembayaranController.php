@@ -15,9 +15,10 @@ class MetodepembayaranController extends Controller
      */
     public function index()
     {
-        $pembayran = Metode_pembayaran::paginate(5);
-        return view('admin.metode_pembayaran.index',[
-
+        $pembayaran = Metode_pembayaran::paginate(5);
+        return view('admin.metode_pembayaran.index', [
+            'title' => 'Metode Pembayarans Table',
+            'pembayarans' => $pembayaran
         ]);
     }
 
@@ -28,7 +29,9 @@ class MetodepembayaranController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.metode_pembayaran.create', [
+            'title' => 'Create Metode Pembayaran'
+        ]);
     }
 
     /**
@@ -37,9 +40,17 @@ class MetodepembayaranController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Metode_pembayaran $pembayaran)
     {
-        //
+        $request->validate([
+            'name' => ['required'],
+        ]);
+
+        $store = $request->all();
+        $pembayaran->create($store);
+
+
+        return redirect()->route('metodepembayaran.index');
     }
 
     /**

@@ -12,4 +12,9 @@ class Travel_packages extends Model
     protected $guarded = [
         'id'
     ];
+
+    public function Transaction()
+    {
+        return $this->hasOne(Transaction::class);
+    }
 }
