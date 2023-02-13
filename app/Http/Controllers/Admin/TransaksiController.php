@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Transaction;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class TransaksiController extends Controller
 {
@@ -47,9 +48,9 @@ class TransaksiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Transaction $transaksi)
     {
-        //
+        return view('admin.transaksi.show',compact('transaksi'));
     }
 
     /**
@@ -85,4 +86,15 @@ class TransaksiController extends Controller
     {
         //
     }
+
+    public function pdf()
+    {
+        $exportpdf = Transaction::with('user', 'travel_packages', 'metode_pembayaran')->where('status', 'sudah dibayar')->get();
+        $pdf = Pdf::loadview('admin.pdf.index',[
+            'pdf' => $exportpdf,
+        ]);
+        // return $pdf->download('laporan.pdf');
+        return dd('jim putih');
+    }
+
 }

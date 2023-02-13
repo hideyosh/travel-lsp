@@ -42,6 +42,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('travelpackages', TravelpackagesController::class);
     Route::resource('metodepembayaran', MetodePembayaranController::class);
     Route::resource('transaksi', TransaksiController::class);
+    Route::get('/laporan/pdf', [TransaksiController::class, 'pdf'])->name('pdf.index');
 });
 
 Route::middleware(['auth', 'user'])->group(function () {

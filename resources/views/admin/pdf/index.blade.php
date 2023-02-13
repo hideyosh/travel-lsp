@@ -7,7 +7,7 @@
     </ol>
     <div class="d-flex">
         <a href="{{ route('transaksi.create') }}" class="btn btn-outline-primary mb-4" style="width: 15rem">Create Transaksi</a>
-        <a href="{{ route('pdf.index') }}" class="btn btn-outline-danger mb-4 ms-4 px-4">Create Transaksi</a>
+        <a href="#" class="btn btn-outline-danger mb-4 ms-4 px-4">Create Transaksi</a>
     </div>
     <div class="card">
         <div class="card-body">
@@ -18,10 +18,11 @@
                     <th>Travel Packages</th>
                     <th>Waktu Pemesanan</th>
                     <th>Status</th>
+                    <th>Harga</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($transaksi as $transaksi)
+                    @foreach ($pdf as $row)
                         <tr>
                             <td>
                                 <p>{{ $transaksi->user->name }}</p>
@@ -35,20 +36,11 @@
                             <td>
                                 <p>{{ $transaksi->status }}</p>
                             </td>
-                            <td class="text-end">
-                                <a href="{{ route('transaksi.show', $transaksi->id) }}" class="btn btn-success">
-                                    <i class="bi bi-eye-fill"></i>
-                                </a>
-                                <a href="{{ route('transaksi.edit', $transaksi->id) }}" class="btn btn-warning">
-                                    <i class="bi bi-pencil-fill"></i>
-                                </a>
-                                <form action="{{ route('transaksi.destroy', $transaksi->id) }}" method="POST" class="d-inline">
-                                    @csrf
-                                    @method('delete')
-                                    <button href="{{ route('logout') }}"  onclick="return confirm('Apakah anda akan menghapus {{ $transaksi->title }}?')" class="btn btn-danger">
-                                        <i class="bi bi-trash-fill"></i>
-                                    </button>
-                                </form>
+                            <td>
+                                <p>{{ $transaksi->total }}</p>
+                            </td>
+                            <td>
+                                <p>{{ $transaksi->visa }}</p>
                             </td>
                         </tr>
                     @endforeach
